@@ -45,3 +45,4 @@ RUN apk add --no-cache --virtual .build-deps \
 
 ENV CPATH /usr/local/include
 ENV LIBRARY_PATH /usr/local/lib
+ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
