@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIPS_VERSION='8.3.1'
+VIPS_VERSION='8.3.2'
 
 # docker images -q | xargs docker rmi -f
 

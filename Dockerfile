@@ -3,7 +3,7 @@ FROM alpine:edge
 WORKDIR /tmp
 ENV LIBVIPS_VERSION_MAJOR 8
 ENV LIBVIPS_VERSION_MINOR 3
-ENV LIBVIPS_VERSION_PATCH 1
+ENV LIBVIPS_VERSION_PATCH 2
 
 RUN apk add --no-cache --virtual .build-deps \
   gcc g++ make libc-dev \
