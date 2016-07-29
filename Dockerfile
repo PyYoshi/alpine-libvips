@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.4
 
 WORKDIR /tmp
 ENV LIBVIPS_VERSION_MAJOR 8
