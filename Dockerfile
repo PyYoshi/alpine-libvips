@@ -2,8 +2,8 @@ FROM alpine:3.4
 
 WORKDIR /tmp
 ENV LIBVIPS_VERSION_MAJOR 8
-ENV LIBVIPS_VERSION_MINOR 3
-ENV LIBVIPS_VERSION_PATCH 2
+ENV LIBVIPS_VERSION_MINOR 4
+ENV LIBVIPS_VERSION_PATCH 1
 
 RUN apk add --no-cache --virtual .build-deps \
   gcc g++ make libc-dev \
@@ -34,7 +34,7 @@ RUN apk add --no-cache --virtual .build-deps \
   tar zvxf vips-${LIBVIPS_VERSION}.tar.gz && \
   cd vips-${LIBVIPS_VERSION} && \
   ./configure --without-python --without-gsf && \
-  make && \
+  make -j4 && \
   make install && \
   rm -rf /tmp/vips-* && \
 
